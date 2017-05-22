@@ -340,11 +340,6 @@ SOMAT<-function(Y,X,G,W,bin_flag=NULL,fixed_method="Q",acr_method="MF"){
     
   }
   
-  ### integrate only works for vectorized function
-  #F_infv <- Vectorize(F_inf, "u_theta_var") 
-  #upper_limit_theta<-t_star*sqrt(2*qW*K)+qW*K
-  #pvalue=1-integrate(F_infv,0,upper_limit_theta)$value
-  
   return(list(pval_oSOMAT =pval_oSOMAT,pval_fSOMAT=pval_fisher,pval_theta=pval_theta,
               pval_tau=pval_tau,rho_opt=c(rho_opt1,t_star),bin_flag=bin_flag))
   
