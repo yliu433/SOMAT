@@ -26,7 +26,7 @@ SOMAT<-function(Y,X,G,W,bin_flag=NULL,fixed_method="Q",acr_method="MF"){
   
   Utheta<-matrix(NA,qW,K) # each column for score statistic for trait k
   U_forV<-list() # each entry for n independent terms for trati k
-  phi_tilde<-c(1,K)
+  phi_tilde<-rep(1,K)
   
   Utheta_forV<-NULL
   
@@ -140,7 +140,7 @@ SOMAT<-function(Y,X,G,W,bin_flag=NULL,fixed_method="Q",acr_method="MF"){
   #****************************************************************
   
   Rtau<-matrix(NA,p,K) # each column for half of score statistic for trait k
-  phi_hat<-c(1,K)
+  phi_hat<-rep(1,K)
   
   M=cbind(X, G%*%t(W))
   
